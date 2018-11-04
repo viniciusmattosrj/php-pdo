@@ -3,6 +3,10 @@
 use app\models\User;
 
 $user = new User;
-dd($user->all());
+$users = $user->all();
+
+dd($users);
+
+$name = 'Vinicius';
 
 require "../app/views/index.php";

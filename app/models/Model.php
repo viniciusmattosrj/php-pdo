@@ -12,11 +12,12 @@ abstract class Model{
     }
 
     public function all() {
-        $sql = "SELECT * FROM {$this->table}";
+        $sql = "SELECT * FROM {$this->table} WHERE id = :id";
         $list = $this->connection->prepare($sql);
+        $list->bindValue(':id',1);
         $list->execute();
 
-        return $list->fetchAll();
+        return $list->fetch();
     }
 
     public function find($find, $value) {

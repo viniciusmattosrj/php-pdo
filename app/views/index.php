@@ -8,7 +8,27 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1 class="text-center">Olá</h1>
+        <h1 class="text-center">Olá <?= $name ?></h1>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            <?php foreach ($users as $user): ?>
+
+                <tr>
+                    <td><?= $user->id   ?></td>
+                    <td><?= $user->name ?></td>
+                </tr>
+
+            <?php endforeach; ?>
+            </tbody>
+        </table>
         
         <!-- Jquery -->
         <script src="//code.jquery.com/jquery.js"></script>
