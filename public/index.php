@@ -1,13 +1,16 @@
 <?php
 
+use app\classes\Routes;
+use app\classes\Uri;
+
 require "../bootstrap.php";
 
-$routes = [ 
+$routes = [
     '/' => 'controllers/index.php',
 ];
 
-$uri = Uri::load();
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-dd($uri);
+$uri = Uri::load();
 
 require Routes::load($routes, $uri);
