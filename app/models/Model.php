@@ -12,7 +12,7 @@ abstract class Model{
     }
 
     public function all() {
-        $sql = "SELECT * FROM {$this->table} WHERE id = :id";
+        $sql  = "SELECT * FROM {$this->table}";
         $list = $this->connection->prepare($sql);
         $list->bindValue(':id',1);
         $list->execute();
@@ -20,8 +20,8 @@ abstract class Model{
         return $list->fetch();
     }
 
-    public function find($find, $value) {
-        $sql = "SELECT * FROM {$this->table} WHERE {$field} = ?";
+    public function find($field, $value) {
+        $sql  = "SELECT * FROM {$this->table} WHERE {$field} = ?";
         $list = $this->connection->prepare($sql);
         $list->bindValue(1, $value);
         $list->execute();

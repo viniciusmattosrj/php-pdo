@@ -3,9 +3,10 @@
 use app\models\User;
 
 $user = new User;
-$users = $user->all();
+//$users = $user->all();
 
-dd($users);
+$userEncontrado = $user->find('id', 1);
+dd($userEncontrado);
 
 $name = 'Vinicius';
 
