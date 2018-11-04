@@ -33,3 +33,6 @@ DROP TABLE posts;
 
 INSERT INTO users (name, email, password)
 VALUES('Vinicius','vinimattos.rj@gmail.com','123');
+
+INSERT INTO users (name, email, password)
+VALUES('Daciolo','cabodaciolo@presidente.com','GloriaDeuxxx');

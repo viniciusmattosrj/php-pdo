@@ -14,16 +14,15 @@ abstract class Model{
     public function all() {
         $sql  = "SELECT * FROM {$this->table}";
         $list = $this->connection->prepare($sql);
-        $list->bindValue(':id',1);
         $list->execute();
 
         return $list->fetch();
     }
 
     public function find($field, $value) {
-        $sql  = "SELECT * FROM {$this->table} WHERE {$field} = ?";
+        $sql  = "SELECT * FROM {$this->table} WHERE {$field} = :id";
         $list = $this->connection->prepare($sql);
-        $list->bindValue(1, $value);
+        $list->bindValue('id', 2);
         $list->execute();
 
         return $list->fetch();
