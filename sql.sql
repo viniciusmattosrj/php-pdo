@@ -1,5 +1,7 @@
+--Criando database
 CREATE DATABASE curso_pdo;
 
+--Criação tabela
 CREATE TABLE users(
     id int(11) auto_increment PRIMARY KEY,
     name varchar(50) not null,
@@ -14,6 +16,7 @@ desc users
 --Apagando tabela
 DROP TABLE users;
 
+--Criação tabela
 CREATE TABLE posts(
     id int(11) auto_increment PRIMARY KEY,
     title varchar(50) not null,
@@ -28,4 +31,5 @@ desc posts
 --Apagando tabela
 DROP TABLE posts;
 
-INSERT INTO users (name, email, password) VALUES('Vinicius','vinimattos.rj@gmail.com','123');
+INSERT INTO users (name, email, password)
+VALUES('Vinicius','vinimattos.rj@gmail.com','123');
