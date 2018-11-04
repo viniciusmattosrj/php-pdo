@@ -22,8 +22,10 @@ abstract class Model{
     public function find($field, $value) {
         $sql  = "SELECT * FROM {$this->table} WHERE {$field} = :id";
         $list = $this->connection->prepare($sql);
-        $list->bindValue('id', 2);
-        $list->execute();
+        //$list->bindValue('id', 2);
+        $list->execute([
+            'id' => 2,
+        ]);
 
         return $list->fetch();
     }
