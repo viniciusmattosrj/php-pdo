@@ -19,13 +19,11 @@ abstract class Model{
         return $list->fetch();
     }
 
-    public function find($field, $value) {
+    public function find($field, $parameters) {
         $sql  = "SELECT * FROM {$this->table} WHERE {$field} = :id";
         $list = $this->connection->prepare($sql);
         //$list->bindValue('id', 2);
-        $list->execute([
-            'id' => 2,
-        ]);
+        $list->execute($parameters);
 
         return $list->fetch();
     }
