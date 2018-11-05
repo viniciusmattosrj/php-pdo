@@ -5,7 +5,7 @@ CREATE DATABASE curso_pdo;
 CREATE TABLE users(
     id int(11) auto_increment PRIMARY KEY,
     name varchar(50) not null,
-    email VARCHAR(50) not null unique key not null,
+    email varchar(50) unique key not null,
     password varchar(150) null,
     created_at timestamp default current_timestamp
 );
