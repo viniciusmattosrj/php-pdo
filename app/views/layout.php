@@ -10,13 +10,12 @@
     <body>
         <h1 class="text-center">Olá</h1>
 
-        <div class="btn-group">
-            <a class="btn btn-default" href="#" role="button">Início</a>
-            <a class="btn btn-default" href="/create_user" role="button">Cadastrar</a>
-        </div>
-
         <div class="container">
-            <?php $layout->load(); ?>
+            <div class="btn-group">
+                <a class="btn btn-default" href="/" role="button">Início</a>
+                <a class="btn btn-default" href="/create_user" role="button">Cadastrar</a>
+            </div>
+            <?php require $layout->load(); ?>
         </div>
         
         <!-- Jquery -->
