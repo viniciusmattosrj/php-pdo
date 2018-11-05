@@ -2,6 +2,8 @@
 
 namespace app\models;
 
+use app\models\Connection;
+
 abstract class Model{
 
     protected $connection;
@@ -16,7 +18,7 @@ abstract class Model{
         $list = $this->connection->prepare($sql);
         $list->execute();
 
-        return $list->fetch();
+        return $list->fetchAll();
     }
 
     public function find($field, $parameters) {
