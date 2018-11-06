@@ -11,10 +11,10 @@ class User extends Model {
 
         $insert = $this->connection->prepare($sql);
 
-        $insert->bindValue('name', $attributes['name']);
-        $insert->bindValue('email', $attributes['email']);
-        $insert->bindValue('password', $attributes['password']);
+        foreach ($attributes as $key => $value){
+            $insert->bindValue($key, $value);
+        }
 
-        return $insert->execute();
+        return $insert->execute($attributes);
     }
 }
