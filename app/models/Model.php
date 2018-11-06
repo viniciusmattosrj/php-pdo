@@ -3,8 +3,12 @@
 namespace app\models;
 
 use app\models\Connection;
+use app\traits\PersistDb;
 
-abstract class Model{
+abstract class Model {
+
+    /* Criação da trait */
+    use PersistDb;
 
     protected $connection;
    
