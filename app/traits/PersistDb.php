@@ -16,7 +16,7 @@ trait PersistDb{
 
     }
 
-    public function update() {
-
-    }
+    #public function update() {
+    #
+    #}
 }

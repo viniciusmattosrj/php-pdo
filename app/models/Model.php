@@ -25,11 +25,11 @@ abstract class Model {
         return $list->fetchAll();
     }
 
-    public function find($field, $parameters) {
-        $sql  = "SELECT * FROM {$this->table} WHERE {$field} = :id";
+    public function find($field, $value) {
+        $sql  = "SELECT * FROM {$this->table} WHERE {$field} = :{$field}";
         $list = $this->connection->prepare($sql);
-        //$list->bindValue('id', 2);
-        $list->execute($parameters);
+        $list->bindValue($field, $value);
+        $list->execute();
 
         return $list->fetch();
     }

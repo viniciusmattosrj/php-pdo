@@ -13,7 +13,7 @@
         <div class="container">
             <div class="btn-group">
                 <a class="btn btn-default" href="/" role="button">Início</a>
-                <a class="btn btn-default" href="/create_user" role="button">Cadastrar</a>
+                <a class="btn btn-default" href="/user_create" role="button">Cadastrar</a>
             </div>
             <?php require $layout->load(); ?>
         </div>
