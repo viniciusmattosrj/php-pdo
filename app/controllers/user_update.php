@@ -2,7 +2,7 @@
 
 use app\models\User;
 
-$user = new User;
+$user    = new User;
 $updated = $user->update($_POST);
 
-dd($updated);
+//dd($updated);

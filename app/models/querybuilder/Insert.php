@@ -4,7 +4,6 @@ namespace app\models\querybuilder;
 
 class Insert
 {
-
     public static function sql($table, $attributes)
     {
 

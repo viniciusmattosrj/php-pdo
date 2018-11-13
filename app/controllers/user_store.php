@@ -13,9 +13,10 @@ $user = new User;
 $cadastrado = $user->insert([
     'name'     => $name,
     'email'    => $email,
-    'password' => $password,
+    'password' => $password
 ]);
 
 if($cadastrado) {
     header('location:/');
 }
+
