@@ -2,7 +2,7 @@
 
 namespace app\classes;
 
-class Routes{
+class Routes {
 
     public static function load($routes, $uri){
 

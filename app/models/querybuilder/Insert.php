@@ -2,8 +2,8 @@
 
 namespace app\models\querybuilder;
 
-class Insert
-{
+class Insert {
+    
     public static function sql($table, $attributes)
     {
 
