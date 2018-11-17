@@ -4,7 +4,7 @@ namespace app\classes;
 
 class Layout{
 
-    public $view;
+    private $view;
 
     public function add($view){
         $this->view = $view;
