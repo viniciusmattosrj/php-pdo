@@ -1,20 +1,14 @@
 <?php
 
-//use app\models\User;
-//use app\models\Post;
+use app\classes\Validation;
 
-//Filtrando dados para evitar SQL Injection
-$name     = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-$email    = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+
+$validation = new Validation;
+$validate   = $validation->validate($_POST); 
 
 $user = new app\models\User;
 
-$cadastrado = $user->insert([
-    'name'     => $name,
-    'email'    => $email,
-    'password' => $password,
-]);
+$cadastrado = $user->insert($validate);
 
 if($cadastrado) {
     header('location:/');

@@ -19,6 +19,8 @@ trait PersistDb{
 
     public function update($attributes, $where) {
 
+        $attributes = (array) $attributes;
+        
         /* Não é um método estático */
         $sql = (new Update)->where($where)->sql($this->table, $attributes);
 

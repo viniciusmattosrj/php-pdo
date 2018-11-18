@@ -1,12 +1,14 @@
 <?php
 
 use app\models\User;
+use app\classes\Validation;
 
 $user  = new User;
+$validation = new Validation;
 
-$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+$validate = $validation->validate($_POST);
 
-$updated = $user->update($_POST, ['id' => $id]);
+$updated  = $user->update($validate, ['id' => $validate->id]);
 
 if($updated) {
     header('location:/');
