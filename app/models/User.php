@@ -18,13 +18,11 @@ class User extends Model {
     #    return $insert->execute($attributes);
     #}
 
-    public function update(array $attributes)
-    {
-        $sql = "UPDATE {$this->table} SET name = :name, email = :email, password = :password WHERE id = :id";
-
-        $update = $this->connection->prepare($sql);
-        $update->execute($attributes);
-
-        return $update->rowCount();
-    }
+    #public function update(array $attributes)
+    #{
+    #    $sql = "UPDATE {$this->table} SET name = :name, email = :email, password = :password WHERE id = :id";
+    #    $update = $this->connection->prepare($sql);
+    #    $update->execute($attributes);
+    #    return $update->rowCount();
+    #}
 }
