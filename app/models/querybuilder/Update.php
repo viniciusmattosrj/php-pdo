@@ -14,23 +14,23 @@ class Update {
         return $this;
     }
 
-    public function sql($table, $attributes) 
+    public function sql($table, $attributes)
     {
-        $sql  = "UPDATE {$table} SET ";
-        
+        $sql = "UPDATE {$table} SET ";
+
         unset($attributes[array_keys($this->where)[0]]);
 
-        foreach($attributes as $key => $value) { 
+        foreach ($attributes as $key => $value) {
             $sql .= "{$key} = :{$key}, ";
         }
 
         $sql = rtrim($sql, ', ');
-        
+
 
         $where = array_keys($this->where);
 
         $sql .= " WHERE {$where[0]} = :{$where[0]}";
-        
+
         return $sql;
     }
 }

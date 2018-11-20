@@ -10,6 +10,6 @@ $validate = $validation->validate($_POST);
 
 $updated  = $user->update($validate, ['id' => $validate->id]);
 
-if($updated) {
+if ($updated) {
     header('location:/');
 }

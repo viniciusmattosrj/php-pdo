@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\classes\Bind;
 use app\models\Connection;
 use app\traits\PersistDb;
 
@@ -14,10 +15,11 @@ abstract class Model {
    
     public function __construct()
     {
-        $this->connection = Connection::connect();
+        $this->connection = Bind::get('connection');
     }
 
-    public function all() {
+    public function all()
+    {
         $sql  = "SELECT * FROM {$this->table}";
         $list = $this->connection->prepare($sql);
         $list->execute();
@@ -25,7 +27,8 @@ abstract class Model {
         return $list->fetchAll();
     }
 
-    public function find($field, $value) {
+    public function find($field, $value)
+    {
         $sql  = "SELECT * FROM {$this->table} WHERE {$field} = :{$field}";
         $list = $this->connection->prepare($sql);
         $list->bindValue($field, $value);
@@ -34,8 +37,9 @@ abstract class Model {
         return $list->fetch();
     }
 
-    public function delete() {
-        $sql = "DELETE FROM {$this->table} WHERE $field = ?";
+    public function delete()
+    {
+        $sql    = "DELETE FROM {$this->table} WHERE $field = ?";
         $delete = $this->connection->prepare($sql);
         $delete->bindValue(1, $value);
         $delete->execute();
