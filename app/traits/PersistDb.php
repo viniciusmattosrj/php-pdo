@@ -16,7 +16,6 @@ trait PersistDb
         $insert = $this->connection->prepare($sql);
 
         return $insert->execute($attributes);
-
     }
 
     public function update($attributes, $where)

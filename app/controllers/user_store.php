@@ -16,7 +16,7 @@ $transaction->transactions(function() use($transaction, $validate) {
 
     $transaction->model(Post::class)->insert([
         'title'       => 'teste',
-        'user'        => 78,
+        'user'        => 3,
         'description' => 'description teste'
     ]);
 });

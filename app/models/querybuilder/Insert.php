@@ -11,7 +11,6 @@ class Insert
 
         $sql .= implode(',', array_keys($attributes)) . ') VALUES(';
         $sql .= ':' . implode(', :', array_keys($attributes)) . ')';
-
         return $sql;
     }
 }
