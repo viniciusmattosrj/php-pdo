@@ -18,14 +18,3 @@ $transaction->transactions(function() use($transaction, $validate) {
         'description' => 'description teste',
     ]);
 });
-
-#$validation = new Validation;
-#$validate   = $validation->validate($_POST); 
-#
-#$user = new app\models\User;
-#
-#$cadastrado = $user->insert($validate);
-#
-#if($cadastrado) {
-#    header('location:/');
-#}
