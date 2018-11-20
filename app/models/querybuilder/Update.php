@@ -2,14 +2,14 @@
 
 namespace app\models\querybuilder;
 
-class Update {
-
+class Update
+{
     private $where;
 
-    public function where ($where)
-    {   
+    public function where($where)
+    {
         $this->where = $where;
-
+        
         /* Retornando o próprio objeto */
         return $this;
     }
@@ -25,7 +25,6 @@ class Update {
         }
 
         $sql = rtrim($sql, ', ');
-
 
         $where = array_keys($this->where);
 
