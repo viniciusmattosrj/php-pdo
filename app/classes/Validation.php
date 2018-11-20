@@ -12,6 +12,6 @@ class Validation
             $this->validate[$key] = filter_var($value, FILTER_SANITIZE_STRING);
         }
 
-        return (object)$this->validate;
+        return (object) $this->validate;
     }
 }

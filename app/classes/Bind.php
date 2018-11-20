@@ -2,8 +2,8 @@
 
 namespace app\classes;
 
-class Bind {
-
+class Bind
+{
     private static $bind = [];
 
     public static function bind($key, $value)

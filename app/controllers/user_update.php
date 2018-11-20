@@ -1,7 +1,7 @@
 <?php
 
-use app\models\User;
 use app\classes\Validation;
+use app\models\User;
 
 $user  = new User;
 $validation = new Validation;
