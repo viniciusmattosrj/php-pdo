@@ -18,6 +18,7 @@ class Update
     {
         $sql = "UPDATE {$table} SET ";
 
+        /* Aqui removo o valor de ID para que consiga utilizar ele no where */
         unset($attributes[array_keys($this->where)[0]]);
 
         foreach ($attributes as $key => $value) {
@@ -26,6 +27,7 @@ class Update
 
         $sql = rtrim($sql, ', ');
 
+        /* O array keys pega só ID neste caso. */
         $where = array_keys($this->where);
 
         $sql .= " WHERE {$where[0]} = :{$where[0]}";
