@@ -4,3 +4,4 @@
 docker-compose.yml
 vendor/
 composer.lock
+anotacoes.sql
