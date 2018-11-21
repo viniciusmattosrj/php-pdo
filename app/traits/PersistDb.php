@@ -7,9 +7,10 @@ use app\models\querybuilder\Update;
 
 trait PersistDb
 {
-
     public function insert($attributes)
     {
+        $attributes = (array) $attributes;
+        
         /* É um método estático */
         $sql = Insert::sql($this->table, $attributes);
 

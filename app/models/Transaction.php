@@ -16,7 +16,7 @@ class Transaction extends Model {
 
         } catch (\Throwable $e) {
             $this->connection->rollback();
-            $dd($e->getMessage());
+            dd($e->getMessage());
         }
     }
 
