@@ -1,7 +1,6 @@
-# PHP com PDO
+# PDO PHP
+- <a href="https://www.asolucoesweb.com.br/curso/pdo-para-quem-nao-sabe-pdo">PDO para quem não sabe PDO</a> - Alexandre Cardoso
 
-PDO quem já sabe e quer relembrar alguns pontos. 
-Author: Alexandre Cardoso asolucoesweb.
 
 ## Instalação
 
