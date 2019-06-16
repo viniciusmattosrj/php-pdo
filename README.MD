@@ -13,6 +13,19 @@ Install <a href="https://docs.docker.com/compose/install/">docker-compose</a>
 
  - PHP >= 7.1
  - Docker
+ - Postgres >= 9.4 ou Mysql >= 5.6
+
+ - Para o acesso no MYSQL database administration tool, use http://localhost:8080 e use as credênciais abaixo:
+
+    server:
+    username:
+    password:
+
+- Para o acesso no MYSQL database administration tool, use http://localhost:8080 e use as credênciais abaixo:
+
+    server:
+    username:
+    password:
 
 
 ## Instalação
