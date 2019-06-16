@@ -41,9 +41,9 @@ No browser digite http://10.11.0.2:8008
 
  - Para o acesso no MYSQL database administration tool, use http://localhost:8080 e use as credênciais abaixo:
 
- - server:
- - username:
- - password:
+  - server:
+  - username:
+  - password:
 
 - Para o acesso no MYSQL database administration tool, use http://localhost:8080 e use as credênciais abaixo:
 
