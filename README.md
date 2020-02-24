@@ -1,4 +1,4 @@
-# PDO PHP
+# Sobre o Projeto
 - <a href="https://www.asolucoesweb.com.br/curso/pdo-para-quem-nao-sabe-pdo">PDO para quem não sabe PDO</a> - Alexandre Cardoso
 
 
@@ -10,11 +10,26 @@
 
 - PHP >= 7.1
 
-- Postgres >= 9.4 ou Mysql >= 5.7
+- Postgres >= 9.6 ou Mysql >= 5.7
 
 
 ## Instalação
-Realizar o git clone do projeto
+Realizar o git clone do projeto base para o funcionamento da sua rede docker:
+```bash
+git@github.com:viniciusmattosrj/projetos.git
+```
+
+Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
+```
+git config core.fileMode false
+```
+
+Agora suba o servidor:
+```
+docker-compose up -d
+```
+
+Navege até dentro da pasta projetos e realize o git clone do projeto
 ```bash
 git@github.com:viniciusmattosrj/php-pdo.git
 ```
@@ -56,7 +71,7 @@ psql -U webadm php_pdo < /var/lib/postgresql/sqlscript/php_pdo.pgsql
 
 Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
 
-  - server:
+  - server: 10.11.0.2
   - username:
   - password:
 
@@ -75,7 +90,7 @@ mysql -u root -p php_pdo < /var/lib/mysql57/php_pdo.sql
 
 Para o acesso no <strong>MYSQL</strong> database administration tool, use http://localhost:8080 e use as credênciais abaixo:
 
-  - server:
+  - server: 10.11.0.3
   - username:
   - password:
 
