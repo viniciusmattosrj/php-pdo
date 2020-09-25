@@ -10,13 +10,13 @@
 
 - PHP >= 7.1
 
-- Postgres >= 9.6 ou Mysql >= 5.7
+- Postgres >= 11 ou Mysql >= 5.7
 
 
 ## Instalação
-Realizar o git clone do projeto base para o funcionamento da sua rede docker:
+Para o correto funcionamento dos serviços base na rede do docker, execute o comando para clonar o projeto:
 ```bash
-git@github.com:viniciusmattosrj/projetos.git
+git clone git@github.com:viniciusmattosrj/projetos.git
 ```
 
 Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
@@ -24,14 +24,14 @@ Para que o git não considere alterações de permissão como modificações a s
 git config core.fileMode false
 ```
 
-Agora suba o servidor:
+Para subir os containers docker execute:
 ```
 docker-compose up -d
 ```
 
-Navege até dentro da pasta projetos e realize o git clone do projeto
+Navege até dentro da pasta projetos e realize o git clone do projeto:
 ```bash
-cd projetos && git@github.com:viniciusmattosrj/php-pdo.git
+cd projetos && git clone git@github.com:viniciusmattosrj/PHP-PSRs.git
 ```
 
 Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
@@ -41,10 +41,10 @@ git config core.fileMode false
 
 Entre pelo terminal na pasta do projeto e rode:
 ```
-cp ./docker-compose-example.php  ./docker-compose.php
+cp -v ./docker-compose-example.php  ./docker-compose.php
 ```
 
-Agora suba o servidor:
+Para subir os containers docker execute:
 ```
 docker-compose up -d
 ```
@@ -66,7 +66,7 @@ psql -U webadm -c "CREATE DATABASE php_pdo";
 
 Realizando a importação dump sql para a base criada:
 ```
-psql -U webadm php_pdo < /var/lib/postgresql/sqlscript/php_pdo.pgsql
+psql -U webadm php_pdo < /var/lib/postgresql/php_pdo.sql
 ```
 
 Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
