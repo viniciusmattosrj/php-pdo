@@ -5,7 +5,7 @@ return [
         'host'      => '10.11.0.4',
         'dbname'    => 'curso_pdo',
         'username'  => 'root',
-        'password'  => '123456A',
+        'password'  => '',
         'charset'   => 'utf8'
     ],
 ];
