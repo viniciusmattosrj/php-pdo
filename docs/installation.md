@@ -26,6 +26,7 @@ cp -v docker-compose.yml.example docker-compose.yml
 cp -v .env.example .env
 ```
 
+&nbsp;
 #### Configurações do .env:
 
 Valor | O que é? | Exemplos de Parâmetros
@@ -37,6 +38,7 @@ DB_DATABASE          | Nome da base dados | ex: 'php_pdo'
 DB_USERNAME          | Usuário de conexão com base de dados | ex: 'root'
 DB_PASSWORD          | Senha de conexão com base de dados | ex: '123Mudar'
 
+&nbsp;
 #### Subir o container
 
 Executar o seguinte comando no diretório do **php-pdo**:
@@ -44,7 +46,18 @@ Executar o seguinte comando no diretório do **php-pdo**:
 docker-compose up -d
 ```
 
-Ele fará com que os containers específicos do php-pdo sejam iniciados.
+Ele fará com que os container específico do php-pdo sejam iniciado.
+
+Execução fora container: 
+```
+docker-compose exec php Makefile"
+```
+
+Execução dentro container:
+```
+docker-compose exec php bash -c "php -S 10.11.0.11:8008 -t public"
+```
+
 
 #### Instalando as dependências via composer
 
