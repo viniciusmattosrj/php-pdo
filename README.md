@@ -1,104 +1,36 @@
-# Sobre o Projeto
-- <a href="https://www.asolucoesweb.com.br/curso/pdo-para-quem-nao-sabe-pdo">PDO para quem não sabe PDO</a> - Alexandre Cardoso
-
+[![pipeline status](https://github.com/viniciusmattosrj/php-pdo/badges/releaseCandidate/pipeline.svg)](https://github.com/viniciusmattosrj/php-pdo/commits/releaseCandidate)
 
 ## Requerimentos
 
 - Install <a href="https://docs.docker.com/install/">Docker</a>
-
 - Install <a href="https://docs.docker.com/compose/install/">docker-compose</a>
+- Mysql >= 5.7 ou Postgres >= 11  
+- Composer
+- PHP &ge; 7.3.22
 
-- PHP >= 7.1
-
-- Postgres >= 11 ou Mysql >= 5.7
-
-
-## Instalação
-Para o correto funcionamento dos serviços base na rede do docker, execute o comando para clonar o projeto:
-```bash
-git clone git@github.com:viniciusmattosrj/projetos.git
-```
-
-Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
-```
-git config core.fileMode false
-```
-
-Para subir os containers docker execute:
-```
-docker-compose up -d
-```
-
-Navege até dentro da pasta projetos e realize o git clone do projeto:
-```bash
-cd projetos && git clone git@github.com:viniciusmattosrj/PHP-PSRs.git
-```
-
-Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
-```
-git config core.fileMode false
-```
-
-Entre pelo terminal na pasta do projeto e rode:
-```
-cp -v ./docker-compose-example.php  ./docker-compose.php
-```
-
-Para subir os containers docker execute:
-```
-docker-compose up -d
-```
-
-Em outra aba do terminal se conecte no container do php e inicie um servidor built in do PHP
-```
-docker exec -it php bash
-php -S 10.11.0.11:8008 -t .
-```
-
-No browser digite http://10.11.0.11:8008
-
-Criando banco dados postgres: 
-
-```
-docker exec -it postgres bash
-psql -U webadm -c "CREATE DATABASE php_pdo";
-```
-
-Realizando a importação dump sql para a base criada:
-```
-psql -U webadm php_pdo < /var/lib/postgresql/php_pdo.sql
-```
-
-Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
-
-  - server: 10.11.0.2
-  - username:
-  - password:
+### Tecnologias Utilizadas
+- PHPUnit &ge; 7.5.*
 
 
-Criando banco dados postgres: 
+### Sobre
 
-```
-docker exec -it mysql bash
-mysql -u root -c "CREATE DATABASE php_pdo;";
-```
-
-Realizando a importação dump sql para a base criada:
-```
-mysql -u root -p php_pdo < /var/lib/mysql57/php_pdo.sql
-```
-
-Para o acesso no <strong>MYSQL</strong> database administration tool, use http://localhost:8080 e use as credênciais abaixo:
-
-  - server: 10.11.0.3
-  - username: root
-  - password: A123456
+Este projeto tem objeto do treino do PHP puro com PDO.
 
 
-## Contribuições
-Caso identifique pontos
-que possam ser aprimorados envie o seu PR. ;-)
+### Requisitos de cloud(nuvem)
+
+* *PHP-FPM*: external Nginx access will point towards this daemon
+
+Veja `.env.example` as [instruções](docs/installation.md) sobre as variáveis de ambiente.
+
+Para instalação verifique **[installation documentation](docs/installation.md)**.
 
 
-## License
+### Contribuições
+
+Caso identifique pontos que possam ser aprimorados, será um prazer analisar o seu PR. ;-)
+
+
+### License
+
 [MIT](https://choosealicense.com/licenses/mit/)
