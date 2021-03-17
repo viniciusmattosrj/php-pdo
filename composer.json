@@ -1,10 +1,11 @@
 {
     "autoload" :{
         "psr-4": {
-            "app\\":"app"
+            "src\\":"src"
         }
     },
-    "require-dev": {
-        "phploc/phploc": "^4.0"
+    "require": {
+        "robmorgan/phinx": "^0.11.7",
+        "vlucas/phpdotenv": "^5.3"
     }
 }
