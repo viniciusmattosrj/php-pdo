@@ -2,9 +2,9 @@
 
 require "../bootstrap.php";
 
-use app\classes\Layout;
-use app\classes\Routes;
-use app\classes\Uri;
+use src\classes\Layout;
+use src\classes\Routes;
+use src\classes\Uri;
 
 $routes = [
     '/'            => 'controllers/index',

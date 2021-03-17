@@ -1,9 +1,9 @@
 <?php
 
-use app\classes\Validation;
-use app\models\Post;
-use app\models\Transaction;
-use app\models\User;
+use src\classes\Validation;
+use src\models\Post;
+use src\models\Transaction;
+use src\models\User;
 
 $validation = new Validation;
 $validate   = $validation->validate($_POST);

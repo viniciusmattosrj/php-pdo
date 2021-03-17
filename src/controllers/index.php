@@ -1,6 +1,6 @@
 <?php
 
-use app\models\User;
+use src\models\User;
 
 $user  = new User;
 $users = $user->all();

@@ -1,10 +1,10 @@
 <?php
 
-namespace app\models;
+namespace src\models;
 
-use app\classes\Bind;
-use app\models\Connection;
-use app\traits\PersistDb;
+use src\classes\Bind;
+use src\models\Connection;
+use src\traits\PersistDb;
 
 abstract class Model {
 

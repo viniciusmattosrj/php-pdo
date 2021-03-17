@@ -1,6 +1,6 @@
 <?php
 
-namespace app\classes;
+namespace src\classes;
 
 class Routes
 {
@@ -11,6 +11,6 @@ class Routes
             throw new \Exception("Rota não existe {$uri}");
         }
         /* A extensão .php está sendo inserida aqui para evitar ficar tratando em cada arquivo. */
-        return "../app/{$routes[$uri]}.php";
+        return "../src/{$routes[$uri]}.php";
     }
 }

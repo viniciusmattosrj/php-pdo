@@ -3,6 +3,5 @@
 function dd($dump)
 {
     var_dump($dump);
-
-    die();
+    die('Ops paraou');
 }

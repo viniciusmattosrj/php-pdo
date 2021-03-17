@@ -1,6 +1,6 @@
 <?php
 
-namespace app\classes;
+namespace src\classes;
 
 class Layout{
 
@@ -13,11 +13,11 @@ class Layout{
 
     public function load()
     {
-        return "../app/views/{$this->view}.php";
+        return "../src/views/{$this->view}.php";
     }
 
     public function master($master)
     {
-        return "../app/views/{$master}.php";
+        return "../src/views/{$master}.php";
     }
 }

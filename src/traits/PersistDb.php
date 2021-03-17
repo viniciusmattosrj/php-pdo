@@ -1,9 +1,9 @@
 <?php
 
-namespace app\traits;
+namespace src\traits;
 
-use app\models\querybuilder\Insert;
-use app\models\querybuilder\Update;
+use src\models\querybuilder\Insert;
+use src\models\querybuilder\Update;
 
 trait PersistDb
 {

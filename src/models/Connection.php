@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace src\models;
 
 use PDO;
 
@@ -8,7 +8,7 @@ class Connection
 {
     public static function connect()
     {
-        $config = require "../config.php";
+        $config = require __DIR__ . '../../bootstrap/config.php';
         $pdo    = new PDO("mysql:host={$config['db']['host']};dbname={$config['db']['dbname']};charset={$config['db']['charset']}",$config['db']['username'], $config['db']['password']);
 
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

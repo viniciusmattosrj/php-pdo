@@ -1,6 +1,6 @@
 <?php
 
-use app\models\User;
+use src\models\User;
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
