@@ -1,6 +1,6 @@
 <?php
 
-require "../bootstrap.php";
+require_once __DIR__ . '../bootstrap/bootstrap.php';
 
 use src\classes\Layout;
 use src\classes\Routes;
@@ -19,5 +19,4 @@ $uri    = Uri::load();
 $layout = new Layout;
 
 require Routes::load($routes, $uri);
-
 require $layout->master('layout');
